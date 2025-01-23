@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2EE1F2C2-040C-46D8-8332-127B746115A6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OpenGL2DTemplate</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OutputPath)\..;$(SolutionDir)\Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glut32.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutputPath)\..;$(SolutionDir)\Libraries</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="8-bit Desert Tune.ogg" />
+    <None Include="Debug\glut32.dll" />
+    <None Include="Debug\openal32.dll" />
+    <None Include="Debug\sfml-audio-2.dll" />
+    <None Include="Debug\sfml-audio-d-2.dll" />
+    <None Include="Debug\sfml-system-2.dll" />
+    <None Include="Debug\sfml-system-d-2.dll" />
+    <None Include="Includes\SFML\Audio\SoundFileFactory.inl" />
+    <None Include="Includes\SFML\System\String.inl" />
+    <None Include="Includes\SFML\System\Thread.inl" />
+    <None Include="Includes\SFML\System\ThreadLocalPtr.inl" />
+    <None Include="Includes\SFML\System\Utf.inl" />
+    <None Include="Includes\SFML\System\Vector2.inl" />
+    <None Include="Includes\SFML\System\Vector3.inl" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="OpenGL2DTemplate.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="glut32.lib" />
+    <Library Include="Libraries\sfml-audio-d.lib" />
+    <Library Include="Libraries\sfml-system-d.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="glut.h" />
+    <ClInclude Include="Includes\SFML\Audio.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\AlResource.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\Export.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\InputSoundFile.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\Listener.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\Music.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\OutputSoundFile.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\Sound.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundFileFactory.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundFileReader.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundFileWriter.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="Includes\SFML\Audio\SoundStream.hpp" />
+    <ClInclude Include="Includes\SFML\Config.hpp" />
+    <ClInclude Include="Includes\SFML\System.hpp" />
+    <ClInclude Include="Includes\SFML\System\Clock.hpp" />
+    <ClInclude Include="Includes\SFML\System\Err.hpp" />
+    <ClInclude Include="Includes\SFML\System\Export.hpp" />
+    <ClInclude Include="Includes\SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="Includes\SFML\System\InputStream.hpp" />
+    <ClInclude Include="Includes\SFML\System\Lock.hpp" />
+    <ClInclude Include="Includes\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="Includes\SFML\System\Mutex.hpp" />
+    <ClInclude Include="Includes\SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="Includes\SFML\System\NonCopyable.hpp" />
+    <ClInclude Include="Includes\SFML\System\Sleep.hpp" />
+    <ClInclude Include="Includes\SFML\System\String.hpp" />
+    <ClInclude Include="Includes\SFML\System\Thread.hpp" />
+    <ClInclude Include="Includes\SFML\System\ThreadLocal.hpp" />
+    <ClInclude Include="Includes\SFML\System\ThreadLocalPtr.hpp" />
+    <ClInclude Include="Includes\SFML\System\Time.hpp" />
+    <ClInclude Include="Includes\SFML\System\Utf.hpp" />
+    <ClInclude Include="Includes\SFML\System\Vector2.hpp" />
+    <ClInclude Include="Includes\SFML\System\Vector3.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="8-bit-video-game-lose-sound-version-1-145828.wav" />
+    <Media Include="8-bit-video-game-win-level-sound-version-1-145827.wav" />
+    <Media Include="badge-coin-win-14675.wav" />
+    <Media Include="coin-recieved-230517.wav" />
+    <Media Include="collect-points-190037.wav" />
+    <Media Include="jump-up-245782.wav" />
+    <Media Include="ping-82822.wav" />
+    <Media Include="Spike-Trap-Sound-Effect.wav" />
+    <Media Include="winsquare-6993.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
