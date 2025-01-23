@@ -6,7 +6,8 @@ a 2D Egyptian themed runner game created using C++, OpenGL, and OpenAL
 ## Description
 You are an archeologist, exploring the Ancient Egyptian ruins.
 You must collect as much treasure as you can, but you must avoid the deadly spikes!
-Avoid them by timing your jump right(using _w_ or _up arrow_ keys) or ducking (using _s_ or _down arrow_ keys)
+Avoid obstacles by timing your jump right(using _w_ or _up arrow_ keys) or ducking (using _s_ or _down arrow_ keys)
+
 ### Objective
 If you collect as much treasure and powerups you can before the time runs out without losing your 5 lives, YOU WIN! :D
 ![Screenshot 2025-01-23 150326](https://github.com/user-attachments/assets/eb4c3324-dce9-4695-9b3f-128850b2d340)
