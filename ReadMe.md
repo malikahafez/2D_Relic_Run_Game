@@ -14,6 +14,13 @@ If you collect as much treasure and powerups you can before the time runs out wi
 If you lose all 5 lives, YOU LOSE! :(
 ![Screenshot 2025-01-23 150441](https://github.com/user-attachments/assets/c6708b7e-6c16-40d8-8b4e-9703c6d260f1)
 
+## Technical Details
+- This project took a lot of time and effort.
+- Every shape on the screen is created from scracth using code and mathematical calculation
+- I designed everything myself then implemented it using OpenGL and C++
+- Every action is connected to audio feedback using sound effects and visual feedback.
+
+
 
 
 
